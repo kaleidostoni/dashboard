@@ -435,3 +435,31 @@ achievementContainerTwo.appendChild(achievementRate);
 //[Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
 //[Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 //[NPS] = [Promoters] - [Detractors]
+
+var promotersSum = 0;
+var passiveSum = 0;
+var detractorsSum = 0;
+
+for( var i = 0; i<4; i++){
+  var promoters = ratings[i].nps.promoters;
+  var passive = ratings[i].nps.passive;
+  var detractors = ratings[i].nps.detractors;
+  promotersSum += promoters;
+  passiveSum += passive;
+  detractorsSum += detractors;
+}
+
+var totalNpsSum = promotersSum+passiveSum+detractorsSum;
+var totalPromoters =(promotersSum/totalNpsSum)*100;
+var totalPassive = (passiveSum/totalNpsSum)*100;
+var totalDetractors = (detractorsSum/totalNpsSum)*100;
+
+var nps = totalPromoters-totalDetractors;
+
+//creando el elemento
+var npsRate = document.createElement('p');
+//agregando atributos
+npsRate.classList.add('nps-rate');
+npsRate.innerText = nps +'%';
+//añadiendo elemento al html
+npsContainerOne.appendChild(npsRate);

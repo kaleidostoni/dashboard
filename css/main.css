@@ -527,3 +527,12 @@ body {
 	display: inline-block;
 	text-align: center;
 }
+
+.nps-rate {
+	color: #F7B617;
+	font-size: 40px;
+	margin-top: -5px ;
+	margin-left: 20px;
+	display: inline-block;
+	text-align: center;
+}
