@@ -165,6 +165,7 @@ body {
 	margin-top: 20px;
 	margin-left: 13px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .achievement-container-two {
@@ -174,6 +175,7 @@ body {
 	margin-top: 20px;
 	margin-left: 12px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .achievement-desc-one {
@@ -501,25 +503,27 @@ body {
 
 .dropout {
 	color: #F7B617;
-	font-size: 50px;
+	font-size: 40px;
 	margin-top: -5px ;
 	margin-left: 10px;
 	display: inline-block;
 	text-align: center;
 }
 
+.students-meeting-target {
+	color: white;
+	font-size: 55px;
+	margin-top: -10px;
+	margin-left: 25px;
+	display: inline-block;
+	text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.achievement-rate{
+	color: #F7B617;
+	font-size: 40px;
+	margin-top: -5px ;
+	margin-left: 10px;
+	display: inline-block;
+	text-align: center;
+}

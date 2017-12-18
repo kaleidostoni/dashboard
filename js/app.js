@@ -397,10 +397,41 @@ enrollmentContainerTwo.appendChild(dropoutRate);
 
 //3. Cantidad de estudiantes que superan la meta de puntos
 //en promedio de todos los sprints cursados
+
 var ratings = generationAqp1.ratings;
-var ratingsLength = ratings.length;sd
-console.log(ratingsLength);
-var meetTheTarget = 0;
-for ( var i = 0; i<ratings.length; i++){
-  var eachRating = ratings[i].students.supera;
-}console.log(eachRating);
+var ratingsLength = ratings.length;
+var sum = 0;
+for(var i =0; i<4; i++){
+  var supera = ratings[i].student.supera;
+  sum += supera;
+  }
+var meetTheTarget = sum/ratingsLength;
+
+//creando el elemento
+var studentsThatMeetTheTarget = document.createElement('p');
+//agregando atributos
+studentsThatMeetTheTarget.classList.add('students-meeting-target');
+studentsThatMeetTheTarget.innerText = meetTheTarget;
+//añadiendo elemento al html
+achievementContainerOne.appendChild(studentsThatMeetTheTarget);
+
+
+//4.El porcentaje que representa el dato anterior
+//en relación al total de estudiantes.
+
+var achivemenPercent = (sum * studentsLength)/100;
+
+//creando el elemento
+var achievementRate = document.createElement('p');
+//agregando atributos
+achievementRate.classList.add('achievement-rate');
+achievementRate.innerText = achivemenPercent +'%';
+//añadiendo elemento al html
+achievementContainerTwo.appendChild(achievementRate);
+
+//5.El Net Promoter Score (NPS) promedio de los sprints cursados.
+
+//[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+//[Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
+//[Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
+//[NPS] = [Promoters] - [Detractors]
