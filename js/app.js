@@ -14,8 +14,8 @@ var totalStudentsBySede= function(){
 
 /*LLAMANDO AL CONTENEDOR*/
 var container = document.getElementById('container');
-
-
+//llamando el contenedor del menu
+var menu = document.getElementById('menu');
 
 /*CREANDO ELEMENTOS*/
 
@@ -54,9 +54,8 @@ var nps = document.createElement('div');
 var npsTitle = document.createElement('h3');
 var npsRule = document.createElement('div');
 var npsContainerOne = document.createElement('div');
-var npsContainerTwo = document.createElement('div');
 var npsDescriptionOne = document.createElement('p');
-var npsDescriptionTwo = document.createElement('p');
+
 //sección skills
 var secondSection= document.createElement('section');
 var skills = document.createElement('div');
@@ -142,11 +141,9 @@ npsTitle.innerText = 'NPS';
 npsTitle.classList.add('nps-title');
 npsRule.classList.add('nps-rule');
 npsContainerOne.classList.add('nps-container-one');
-npsContainerTwo.classList.add('nps-container-two');
 npsDescriptionOne.classList.add ("nps-desc-one");
-npsDescriptionTwo.classList.add ("nps-desc-two");
 npsDescriptionOne.innerText = ' % NPS CUMULATIVE';
-npsDescriptionTwo.innerText = '%OF TOTAL';
+
 //sección skills
 secondSection.classList.add('second-section');
 skills.classList.add('skills');
@@ -196,9 +193,11 @@ container.appendChild(navBar);
 navBar.appendChild(logoSection);
 navBar.appendChild(userSection);
 logoSection.appendChild(logo);
+userSection.appendChild(menu);
 userSection.appendChild(buttonSettings);
 userSection.appendChild(buttonLogOut);
 buttonSettings.appendChild(settingsIcon);
+
 
 //main
 container.appendChild(mainSide);

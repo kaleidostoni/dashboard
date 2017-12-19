@@ -26,6 +26,33 @@ body {
 	background-color: #F7B617;
 }
 
+#menu {
+	height: 80px;
+	width: 40%;
+	background-color: #F7B617;
+	color: black;
+	vertical-align: top;
+	display:inline-block;
+	 }
+	ul li{
+		list-style: none;
+	display:inline-block;
+		}
+	.sub{
+		padding: 10px 10px;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+		display:inline-block;
+		margin-top: 20px;
+		border-right: 1px solid black;
+		}
+	.sub:hover {
+		background-color: #F7B617;
+		cursor: pointer;
+		box-shadow: 1px 1px 3px  #4c4c4c;
+	}
 .log-out-button {
 		margin-top: 30px;
 		margin-left: 20px;
@@ -48,7 +75,7 @@ body {
 
 	.settings-button {
 			margin-top: 30px;
-			margin-left: 500px;
+			margin-left: 320px;
 			vertical-align: top;
 			text-decoration:none;
 	    padding: 10px;
