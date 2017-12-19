@@ -536,3 +536,21 @@ body {
 	display: inline-block;
 	text-align: center;
 }
+
+.satisfaction-rate {
+	color: #F7B617;
+	font-size: 40px;
+	margin-top: -5px ;
+	margin-left: 20px;
+	display: inline-block;
+	text-align: center;
+}
+
+.teacher-rate, .jedi-rate {
+	color: white;
+	font-size: 55px;
+	margin-top: -10px;
+	margin-left: 45px;
+	display: inline-block;
+	text-align: center;
+}

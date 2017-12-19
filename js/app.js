@@ -463,3 +463,72 @@ npsRate.classList.add('nps-rate');
 npsRate.innerText = nps +'%';
 //añadiendo elemento al html
 npsContainerOne.appendChild(npsRate);
+
+//6.La cantidad y el porcentaje que representa el total de estudiantes
+// que superan la meta de puntos técnicos en promedio y por sprint.
+
+
+
+
+//7.La cantidad y el porcentaje que representa el total de estudiantes
+//que superan la meta de puntos de HSE en promedio y por sprint.
+
+
+
+
+ //8.El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+//9.La puntuación promedio de l@s profesores.
+//10.La puntuación promedio de l@s jedi masters.
+
+var sumCumple= 0;
+var sumSupera= 0;
+var sumNoCumple= 0;
+var sumTeacher= 0;
+var sumJedis= 0;
+
+
+for (var i= 0; i < ratings.length; i++) {
+
+  var cumple= ratings[i].student.cumple;//Alumnas que cumple con el minimo requerido
+  var supera= ratings[i].student.supera;//Alumnas que supera el minimo requerido
+  var noCumple= ratings[i].student["no-cumple"];//Alumnas que NO-cumple el minimo requerido
+  var teacher = ratings[i].teacher; //Total teachers
+  var jedi= ratings[i].jedi;//Total jedis
+  sumCumple += cumple;
+  sumSupera += supera;
+  sumNoCumple += noCumple;
+  sumTeacher += teacher;
+  sumJedis += jedi;
+
+}
+//console.log(sumCumple);
+//console.log(sumSupera);
+//console.log(sumNoCumple);
+//console.log(sumTeacher);
+//console.log(sumJedis);
+
+
+var totalAlumnas= (sumCumple+sumSupera+sumNoCumple);
+var porcentajeSatisfactorio = (sumCumple + sumSupera)* 100/totalAlumnas;
+var promTeachers= (sumTeacher/ratings.length).toFixed(1);//puntuacion promedio de los profesores
+var promJedis= (sumJedis / ratings.length).toFixed(1);//puntuacion promedio de los jedis
+//console.log(totalAlumnas);
+//console.log(porcentajeSatisfactorio);
+//console.log(promTeachers);
+//console.log(promJedis);
+
+//creando el elemento
+var satisfactionRate = document.createElement('p');
+var teacherRate = document.createElement('p');
+var jediRate = document.createElement('p');
+//agregando atributos
+satisfactionRate.classList.add('satisfaction-rate');
+satisfactionRate.innerText = porcentajeSatisfactorio +'%';
+teacherRate.classList.add('teacher-rate');
+teacherRate.innerText = promTeachers;
+jediRate.classList.add('jedi-rate');
+jediRate.innerText = promJedis;
+//añadiendo elemento al html
+satisfactionContainerOne.appendChild(satisfactionRate);
+teacherContainerOne.appendChild(teacherRate);
+jediContainerOne.appendChild(jediRate);
