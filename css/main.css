@@ -19,10 +19,55 @@ body {
 }
 
 .user-section {
+	vertical-align: top;
 	display: inline-block;
 	width: 80%;
 	height: 80px;
 	background-color: #F7B617;
+}
+
+.log-out-button {
+		margin-top: 30px;
+		margin-left: 20px;
+		vertical-align: top;
+		text-decoration:none;
+		padding: 10px;
+		font-weight: 700;
+		font-size: 15px;
+		color: black;
+		background-color: #F7B617;
+		border: 2px solid #F7B617;
+		box-shadow: 1px 1px 3px  #4c4c4c;
+		display:inline-block;
+  }
+.log-out-button:hover{
+		color: black;
+		background-color: #F7B617;
+		border:2px solid black;
+  }
+
+	.settings-button {
+			margin-top: 30px;
+			margin-left: 500px;
+			vertical-align: top;
+			text-decoration:none;
+	    padding: 10px;
+	    font-weight: 700;
+	    font-size: 15px;
+	    color: black;
+	    background-color: #F7B617;
+			border: 2px solid #F7B617;
+			box-shadow: 1px 1px 3px  #4c4c4c;
+			display:inline-block;
+	  }
+	.settings-button:hover{
+	    color: black;
+	    background-color: #F7B617;
+			border:2px solid black;
+	  }
+.fa-cog {
+	color:black;
+	margin-left: 5px;
 }
 
 .logo {
@@ -54,6 +99,7 @@ body {
 	height: 900px;
 	background-color: #333333;
 }
+
 
 /* sección principal (datos)*/
 

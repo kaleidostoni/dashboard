@@ -24,6 +24,9 @@ var navBar = document.createElement('header');
 var logoSection = document.createElement('div');
 var userSection = document.createElement('div');
 var logo = document.createElement('img');
+var buttonLogOut = document.createElement('a');
+var buttonSettings = document.createElement('a');
+var settingsIcon = document.createElement('i');
 //main
 var mainSide = document.createElement('section');
 var mainBody = document.createElement('section');
@@ -96,6 +99,15 @@ logoSection.classList.add('logo-section');
 userSection.classList.add('user-section');
 logo.setAttribute('src','assets/images/logo-laboratoria.svg');
 logo.classList.add('logo');
+buttonLogOut.classList.add('log-out-button');
+buttonLogOut.innerText ='LOG OUT';
+buttonLogOut.setAttribute("href", "#");
+buttonSettings.classList.add('settings-button');
+buttonSettings.innerText ='SETTINGS';
+buttonSettings.setAttribute("href", "#");
+settingsIcon.classList.add('fa');
+settingsIcon.classList.add('fa-cog');
+settingsIcon.setAttribute('area-hidden','true');
 //main
 mainSide.classList.add('main-side');
 mainBody.classList.add('main-body');
@@ -184,6 +196,10 @@ container.appendChild(navBar);
 navBar.appendChild(logoSection);
 navBar.appendChild(userSection);
 logoSection.appendChild(logo);
+userSection.appendChild(buttonSettings);
+userSection.appendChild(buttonLogOut);
+buttonSettings.appendChild(settingsIcon);
+
 //main
 container.appendChild(mainSide);
 container.appendChild(mainBody);
